@@ -1,0 +1,56 @@
+
+
+
+<nav class="navbar navbar-expand-lg  bg-primary   ">
+
+
+    <div class ="    container  text-center m-20" style=" ">
+<table class="table-hover "  style="text-align: center; margin: auto;">
+        <thead >
+            <tr>
+  
+              
+                <th class="col-3">name</th>
+                <th class="col-3">Email </th>
+                <th class="col-2">number</th>
+    
+                <th  class="col-3">Adress</th>
+            
+  
+      
+            </tr>
+          </thead>
+          <tbody >
+    <td >{{user.name}}</td>
+    <td >{{user.email}}</td>
+    <td >{{user.phone}}</td>
+    <td >{{user.address.street}} , {{user.address.suite}}, {{user.address.city}}</td>
+          </tbody >
+    </table>
+</div>
+</nav>
+
+
+
+<h2 style="text-align: center ; margin: auto;  color: #f7b70a;">{{user.name}} album </h2>
+
+<div class="container d-flex   justify-content-center flex-wrap" >
+
+
+
+
+    <div  *ngFor="let album of albums"  class="m-5  card  col-2"  routerLink="album/{{album.id}}" style=" height: 150px;  background-color: rgb(219, 137, 14); ">
+    
+    <div style="height: 70%;">
+        <p style="text-align: center; margin-top: 30%;"> {{album.title}} </p>
+    </div>
+
+
+
+    <div style="height: 20%;">
+        <p  class="btn bg-light w-100" style="text-align: center;">{{album.id}} </p>
+    </div>
+
+
+
+</div>

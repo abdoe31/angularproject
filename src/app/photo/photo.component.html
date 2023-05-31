@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg  bg-primary   ">
+
+
+    <div class ="    container  text-center m-20" style=" ">
+<table class="table-hover "  style="text-align: center; margin: auto;">
+        <thead >
+            <tr>
+  
+              
+                <th class="col-3">name</th>
+                <th class="col-3">Email </th>
+                <th class="col-2">number</th>
+    
+                <th  class="col-3">Adress</th>
+            
+  
+      
+            </tr>
+          </thead>
+          <tbody >
+    <td >{{user.name}}</td>
+    <td >{{user.email}}</td>
+    <td >{{user.phone}}</td>
+    <td >{{user.address.street}} , {{user.address.suite}}, {{user.address.city}}</td>
+          </tbody >
+    </table>
+
+    
+</div>
+</nav>
+
+
+<h2   style="text-align: center ; margin: auto; color: #f7b70a;"> Photo </h2>
+
+<div class="container d-flex   justify-content-center flex-wrap" >
+<div  *ngFor="let photo of photos"  class="m-1   col-2"  style="  ">
+    
+    <div>
+        <img class="img-fluid m-5" src={{photo.url}} > 
+    </div>
+
+
+</div>
